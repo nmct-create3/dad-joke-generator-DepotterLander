@@ -2,80 +2,89 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 600;
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2")
+}
 
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
 :root {
-    /* Global colors */
-    --global-color-primary-000: #E6F6FF;
-    --global-color-primary-050: #B3E6FF;
-    --global-color-primary-100: #80D6FF;
-    --global-color-primary-200: #4DC6FF;
-    --global-color-primary-300: #1AB6FF;
-    --global-color-primary-400: #009CDB;
-    --global-color-primary-500: #0082B2;
-    --global-color-primary-600: #00688A;
-    --global-color-primary-700: #004E61;
-    --global-color-primary-800: #003438;
-    --global-color-primary-900: #001A0F;
-
-    --global-color-neutral-000: white;
-    --global-color-neutral-050: #F7F7F7;
-    --global-color-neutral-100: #E1E1E1;
-    --global-color-neutral-200: #CFCFCF;
-    --global-color-neutral-300: #B1B1B1;
-    --global-color-neutral-400: #9E9E9E;
-    --global-color-neutral-500: #7E7E7E;
-    --global-color-neutral-600: #626262;
-    --global-color-neutral-700: #515151;
-    --global-color-neutral-800: #3B3B3B;
-    --global-color-neutral-900: #222222;
-
-    /* global page settings */
-    --global-page-backgroundColor: var(--global-color-neutral-000);
-    --global-page-color: var(--global-color-neutral-900);
-    --global-selection-backgroundColor: var(--global-color-primary-100);
-
-    /* forms */
-    --global-placeholder-color: var(--global-color-neutral-400);
-
-    /* borders */
-    --global-borderWidth: 1px;
-    --global-borderColor: var(--global-color-neutral-100);
-
-    /* transitions */
-    --global-transitionDuration-alpha: 0.2s;
-    --global-transitionEasing-out: cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Baseline settings */
-    --global-baseline: 8px;
-    --global-whitespace: calc(var(--global-baseline) * 3);
-    /* = 24px */
-
-    --global-whitespace-xs: calc(var(--global-baseline) * .5);
-    /* = 4px */
-    --global-whitespace-sm: calc(var(--global-baseline) * 1);
-    /*  = 8px */
-    --global-whitespace-md: calc(var(--global-baseline) * 2);
-    /*  = 16px */
-    --global-whitespace-lg: calc(var(--global-baseline) * 4);
-    /*  = 32px */
-    --global-whitespace-xl: calc(var(--global-whitespace) * 2);
-    /*  = 48px */
-    --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
-    /*  = 72px */
-
-    /* forms */
+     /* colors */
+     --global-color-alpha-h: 216deg;
+     --global-color-alpha-s: 100%;
+     --global-color-alpha-l: 60%;
+     --global-color-alpha-hsl: var(--global-color-alpha-h) var(--global-color-alpha-s) var(--global-color-alpha-l);
+     --global-color-alpha: hsl(var(--global-color-alpha-hsl));
+     --global-color-alpha-light: hsl(var(--global-color-alpha-h) 100% 65%);
+     --global-color-alpha-dark: hsl(var(--global-color-alpha-h) 80% 55%);
+     --global-color-alpha-x-dark: hsl(var(--global-color-alpha-h) 65% 35%);
+     --global-color-alpha-transparent: hsl(var(--global-color-alpha-hsl) / .75);
+     --global-color-alpha-x-transparent: hsl(var(--global-color-alpha-hsl) / .3);
+ 
+     --global-color-neutral-xxxx-light: #F5F6FA;
+     --global-color-neutral-xxx-light: #E2E3E7;
+     --global-color-neutral-xx-light: #caccd4;
+     --global-color-neutral-x-light: #b5b6c0;
+     --global-color-neutral-light: #a0a1ad;
+     --global-color-neutral: #8b8c9a;
+     --global-color-neutral-dark: #757787;
+     --global-color-neutral-x-dark: #606274;
+     --global-color-neutral-xx-dark: #4b4c60;
+     --global-color-neutral-xxx-dark: #35374d;
+     --global-color-neutral-xxxx-dark: #20223a;
+ 
+     /* border stuff */
+     --global-borderRadius: 3px;
+     --global-borderWidth: 1px;
+ 
+     /* transitions */
+     --global-transitionTiming-alpha: .1s ease-out;
+ 
+     /* Baseline settings */
+     --global-baseline: 8px;
+     --global-whitespace: calc(var(--global-baseline) * 3);
+     /* = 24px */
+ 
+     --global-whitespace-xs: calc(var(--global-baseline) / 2);
+     /* = 4px */
+     --global-whitespace-sm: calc(var(--global-baseline) * 1);
+     /*  = 8px */
+     --global-whitespace-md: calc(var(--global-baseline) * 2);
+     /*  = 16px */
+     --global-whitespace-lg: calc(var(--global-baseline) * 4);
+     /*  = 32px */
+     --global-whitespace-xl: calc(var(--global-whitespace) * 2);
+     /*  = 48px */
+     --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
+     /*  = 72px */
+ 
+     --global-input-backgroundColor: White;
+     --global-input-color: var(--global-color-neutral-950);
+     --global-input-borderColor: #E2E3E7;
+     --global-input-hover-borderColor: #3385FF;
+     --global-input-focus-borderColor: #81ADF0;
+ 
+     --global-page-color: var(--global-color-neutral-xxxx-dark);
+     --global-page-backgroundColor: var(--global-color-neutral-xxxx-light);
 }
+
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --global-page-color: var(--global-color-neutral-050);
-        --global-page-backgroundColor: var(--global-color-neutral-900);
+      --global-page-color: White;
+      --global-page-backgroundColor: var(--global-color-neutral-xxxx-dark);
     }
-}
+  }
 
 /*------------------------------------*\
 #GENERIC
@@ -86,17 +95,23 @@
     ---
     Global page styles + universal box-sizing:
 */
-
 html {
-    background-color: var(--global-page-backgroundColor);
-    color: var(--global-page-color);
-    font-size: 100%;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: 'Inter Web', Helvetica, arial, sans-serif;
+    color: var(--global-color-neutral-xxxx-dark);
+    background-color: var(--global-color-neutral-xxxx-light);
+  
+    color: var(--global-page-color);
+    background-color: var(--global-page-backgroundColor);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+  }
+  
+  html {
+    color: var(--global-page-color);
+    background-color: var(--global-page-backgroundColor);
+  }
 
 body {
     margin: 0;
@@ -463,6 +478,22 @@ input::placeholder {
     Small button reset object
 */
 
+.c-button {
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: var(--global-borderRadius);
+    border: var(--global-borderWidth) solid var(--global-color-alpha-dark);
+    background-color: var(--global-color-alpha);
+    color: #fff;
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+    line-height: calc(var(--global-baseline) * 3);
+    width: 100%;
+    outline: none;
+    transition: all var(--global-transition-timing-alpha);
+}
+
+
+
 .o-button-reset {
     border: none;
     margin: 0;
@@ -485,7 +516,6 @@ input::placeholder {
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
-
 /*
     Object: Hide accessible
     ---
@@ -506,6 +536,46 @@ input::placeholder {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
+
+.c-app {
+    background-color: White;
+    margin-bottom: var(--global-whitespace);
+    border-radius: var(--global-borderRadius);
+    box-shadow: 0 0 0 var(--global-borderWidth) rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, .075);
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-app {
+      background-color: var(--global-color-neutral-xxx-dark);
+    }
+  }
+
+
+
+/* Add padding to child for more flexibility */
+.c-app__joke-wrapper {
+    padding: var(--global-whitespace);
+}
+
+
+.c-title {
+    text-align: center;
+    font-size: 18px;
+    line-height: calc(var(--global-baseline) * 3);
+    font-weight: 600;
+}
+
+
+@media (min-width: 27em) {
+    .c-app__joke-wrapper {
+        padding: var(--global-whitespace-xl);
+    }
+
+    .c-title {
+        margin-bottom: var(--global-whitespace-xl);
+    }
+}
 
 
 
